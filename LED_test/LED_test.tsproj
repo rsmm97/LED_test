@@ -58,22 +58,31 @@
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
 						<Var>
-							<Name>MAIN.bAnalogOutput1</Name>
+							<Name>MAIN.bAnalogOutput1.iRaw</Name>
 							<Comment>
-								<![CDATA[ Analog Output variables]]>
+								<![CDATA[ Connect this output to the terminal]]>
 							</Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>MAIN.bAnalogOutput2</Name>
+							<Name>MAIN.bAnalogOutput2.iRaw</Name>
+							<Comment>
+								<![CDATA[ Connect this output to the terminal]]>
+							</Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>MAIN.bAnalogOutput3</Name>
+							<Name>MAIN.bAnalogOutput3.iRaw</Name>
+							<Comment>
+								<![CDATA[ Connect this output to the terminal]]>
+							</Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>MAIN.bAnalogOutput4</Name>
+							<Name>MAIN.bAnalogOutPut4.iRaw</Name>
+							<Comment>
+								<![CDATA[ Connect this output to the terminal]]>
+							</Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
@@ -88,6 +97,22 @@
 							<Type>UINT</Type>
 						</Var>
 					</Vars>
+					<UnrestoredVarLinks ImportTime="2022-04-26T12:47:35">
+						<OwnerA Name="OutputSrc" Prefix="TIPC^LED_test^LED_test Instance" Type="2">
+							<OwnerB Name="TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004">
+								<Link VarA="MAIN.bAnalogOutput4" TypeA="INT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AO Outputs Channel 4^Analog output" AutoLink="true" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+					<UnrestoredVarLinks ImportTime="2022-04-26T13:11:33">
+						<OwnerA Name="OutputSrc" Prefix="TIPC^LED_test^LED_test Instance" Type="2">
+							<OwnerB Name="TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004">
+								<Link VarA="MAIN.bAnalogOutput1" TypeA="INT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AO Outputs Channel 1^Analog output" AutoLink="true" RestoreInfo="ANotFound"/>
+								<Link VarA="MAIN.bAnalogOutput2" TypeA="INT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AO Outputs Channel 2^Analog output" AutoLink="true" RestoreInfo="ANotFound"/>
+								<Link VarA="MAIN.bAnalogOutput3" TypeA="INT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AO Outputs Channel 3^Analog output" AutoLink="true" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
 					<TaskPouOids>
 						<TaskPouOid Prio="20" OTCID="#x08502001"/>
 					</TaskPouOids>
@@ -251,10 +276,10 @@
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
 		<OwnerA Name="TIPC^LED_test^LED_test Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004">
-				<Link VarA="PlcTask Outputs^MAIN.bAnalogOutput1" VarB="AO Outputs Channel 1^Analog output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^MAIN.bAnalogOutput2" VarB="AO Outputs Channel 2^Analog output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^MAIN.bAnalogOutput3" VarB="AO Outputs Channel 3^Analog output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^MAIN.bAnalogOutput4" VarB="AO Outputs Channel 4^Analog output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^MAIN.bAnalogOutPut4.iRaw" VarB="AO Outputs Channel 4^Analog output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^MAIN.bAnalogOutput1.iRaw" VarB="AO Outputs Channel 1^Analog output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^MAIN.bAnalogOutput2.iRaw" VarB="AO Outputs Channel 2^Analog output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^MAIN.bAnalogOutput3.iRaw" VarB="AO Outputs Channel 3^Analog output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Power_EK1200^PWM_EL2502">
 				<Link VarA="PlcTask Outputs^MAIN.bPwmOutput1" VarB="PWM Outputs Channel 1^PWM output" AutoLink="true"/>

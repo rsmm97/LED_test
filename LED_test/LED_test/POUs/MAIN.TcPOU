@@ -6,18 +6,18 @@ VAR
 	
 // Analog Output variables
 
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004^AO Outputs Channel 1^Analog output'}
-	bAnalogOutput1 AT %Q* : INT;
+	{attribute 'TcLinkTo' := '.iRaw := TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004^AO Outputs Channel 1^Analog output'}
+	bAnalogOutput1 : FB_AnalogOutput;
 	
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004^AO Outputs Channel 2^Analog output'}
-	bAnalogOutput2 AT %Q* : INT;
+	{attribute 'TcLinkTo' := '.iRaw := TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004^AO Outputs Channel 2^Analog output'}
+	bAnalogOutput2 : FB_AnalogOutput;
 	
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004^AO Outputs Channel 3^Analog output'}
-	bAnalogOutput3 AT %Q* : INT;
+	{attribute 'TcLinkTo' := '.iRaw := TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004^AO Outputs Channel 3^Analog output'}
+	bAnalogOutput3 : FB_AnalogOutput;
 	
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004^AO Outputs Channel 4^Analog output'}
-	bAnalogOutput4 AT %Q* : INT;
-	
+	{attribute 'TcLinkTo' := '.iRaw := TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004^AO Outputs Channel 4^Analog output'}
+    bAnalogOutPut4 : FB_AnalogOutput;
+
 	
 // PWM Output variables
 
