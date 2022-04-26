@@ -3,17 +3,30 @@
   <POU Name="MAIN" Id="{01e2daed-a312-437a-8aa5-c891de0de905}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+	
+// Analog Output variables
+
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004^AO Outputs Channel 1^Analog output'}
-	bAnalogOutput1 AT %I* : BOOL;
+	bAnalogOutput1 AT %Q* : INT;
 	
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004^AO Outputs Channel 2^Analog output'}
-	bAnalogOutput2 AT %I* : BOOL;
+	bAnalogOutput2 AT %Q* : INT;
 	
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004^AO Outputs Channel 3^Analog output'}
-	bAnalogOutput3 AT %I* : BOOL;
+	bAnalogOutput3 AT %Q* : INT;
 	
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004^AO Outputs Channel 4^Analog output'}
-	bAnalogOutput4 AT %I* : BOOL;
+	bAnalogOutput4 AT %Q* : INT;
+	
+	
+// PWM Output variables
+
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Power_EK1200^PWM_EL2502^PWM Outputs Channel 1^PWM output'}
+	bPwmOutput1 AT %Q* : UINT;
+
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Power_EK1200^PWM_EL2502^PWM Outputs Channel 2^PWM output'}
+	bPwmOutput2 AT %Q* : UINT;	
+
 END_VAR
 ]]></Declaration>
     <Implementation>
