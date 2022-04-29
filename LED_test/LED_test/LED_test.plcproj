@@ -17,10 +17,13 @@
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Function Blocks\AnalogOut.TcPOU">
+    <Compile Include="POUs\Function Blocks\FB_AnalogOut.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Function Blocks\PWM_Output.TcPOU">
+    <Compile Include="POUs\Function Blocks\FB_PWM_Output.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Function Blocks\FB_TMO_LED.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\MAIN.TcPOU">

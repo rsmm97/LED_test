@@ -20,17 +20,29 @@ VAR
 
 	
 // PWM Output variables
-
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Power_EK1200^PWM_EL2502^PWM Outputs Channel 1^PWM output'}
-	bPwmOutput1 AT %Q* : UINT;
-
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Power_EK1200^PWM_EL2502^PWM Outputs Channel 2^PWM output'}
-	bPwmOutput2 AT %Q* : UINT;	
+    {attribute 'TcLinkTo' := '.iIlluminatorINT := TIID^Device 1 (EtherCAT)^Power_EK1200^PWM_EL2502^PWM Outputs Channel 1^PWM output'}
+    {attribute 'pytmc' := '
+		pv: TST:01
+		io: io
+	'}
+    bPwmOutput1 : FB_TMO_LED;	
+	
+	{attribute 'TcLinkTo' := '.iIlluminatorINT := TIID^Device 1 (EtherCAT)^Power_EK1200^PWM_EL2502^PWM Outputs Channel 2^PWM output'}
+	{attribute 'pytmc' := '
+		pv: TST:02
+		io: io
+	'}
+	bPwmOutput2 : FB_TMO_LED;	
 
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[//bPwmOutput1.fIlluminatorPercent:=not IO.bMyInput1;
+
+bPwmOutput1.M_Set_IllPercentage(100);
+bPwmOutput1(fbSetIllPercent=>);
+
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

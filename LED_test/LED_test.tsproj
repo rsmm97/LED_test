@@ -86,15 +86,34 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>MAIN.bPwmOutput1</Name>
-							<Comment>
-								<![CDATA[ PWM Output variables]]>
-							</Comment>
-							<Type>UINT</Type>
+							<Name>MAIN.bPwmOutput1.iIlluminatorINT</Name>
+							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>MAIN.bPwmOutput2</Name>
-							<Type>UINT</Type>
+							<Name>MAIN.bPwmOutput1.bLedPower</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.bPwmOutput1.fbSetIllPercent.iRaw</Name>
+							<Comment>
+								<![CDATA[ Connect this output to the terminal]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.bPwmOutput2.iIlluminatorINT</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.bPwmOutput2.bLedPower</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.bPwmOutput2.fbSetIllPercent.iRaw</Name>
+							<Comment>
+								<![CDATA[ Connect this output to the terminal]]>
+							</Comment>
+							<Type>INT</Type>
 						</Var>
 					</Vars>
 					<UnrestoredVarLinks ImportTime="2022-04-26T12:47:35">
@@ -110,6 +129,14 @@
 								<Link VarA="MAIN.bAnalogOutput1" TypeA="INT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AO Outputs Channel 1^Analog output" AutoLink="true" RestoreInfo="ANotFound"/>
 								<Link VarA="MAIN.bAnalogOutput2" TypeA="INT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AO Outputs Channel 2^Analog output" AutoLink="true" RestoreInfo="ANotFound"/>
 								<Link VarA="MAIN.bAnalogOutput3" TypeA="INT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AO Outputs Channel 3^Analog output" AutoLink="true" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+					<UnrestoredVarLinks ImportTime="2022-04-29T12:26:08">
+						<OwnerA Name="OutputSrc" Prefix="TIPC^LED_test^LED_test Instance" Type="2">
+							<OwnerB Name="TIID^Device 1 (EtherCAT)^Power_EK1200^PWM_EL2502">
+								<Link VarA="MAIN.bPwmOutput1" TypeA="UINT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="PWM Outputs Channel 1^PWM output" AutoLink="true" RestoreInfo="ANotFound"/>
+								<Link VarA="MAIN.bPwmOutput2" TypeA="UINT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="PWM Outputs Channel 2^PWM output" AutoLink="true" RestoreInfo="ANotFound"/>
 							</OwnerB>
 						</OwnerA>
 					</UnrestoredVarLinks>
@@ -282,8 +309,8 @@
 				<Link VarA="PlcTask Outputs^MAIN.bAnalogOutput3.iRaw" VarB="AO Outputs Channel 3^Analog output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Power_EK1200^PWM_EL2502">
-				<Link VarA="PlcTask Outputs^MAIN.bPwmOutput1" VarB="PWM Outputs Channel 1^PWM output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^MAIN.bPwmOutput2" VarB="PWM Outputs Channel 2^PWM output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^MAIN.bPwmOutput1.iIlluminatorINT" VarB="PWM Outputs Channel 1^PWM output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^MAIN.bPwmOutput2.iIlluminatorINT" VarB="PWM Outputs Channel 2^PWM output" AutoLink="true"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>

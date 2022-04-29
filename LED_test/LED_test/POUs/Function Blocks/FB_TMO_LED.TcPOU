@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="FB_TMO_LED" Id="{a99d7fba-0318-482f-b028-cab96116f8cb}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_TMO_LED
+VAR
+	iIlluminatorINT AT %Q*: INT;
+
+    {attribute 'pytmc' := '
+        pv: PWR
+        field: ZNAM OFF
+        field: ONAM ON
+    '}
+    bLedPower AT %Q*: BOOL;
+
+    {attribute 'pytmc' := '
+        pv: CIL:PCT
+        EGU: %
+    '}
+    fIlluminatorPercent: LREAL;
+//    fbGetIllPercent: FB_AnalogInput;
+    fbSetIllPercent: FB_PWM_Output;
+
+    bLedInit: BOOL := FALSE;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Turn the LED off by default
+IF bLedInit THEN
+    bLedPower := FALSE;
+//    bLedInit := TRUE;
+END_IF
+
+// Illuminator conversion to percentage
+fbSetIllPercent(
+    fReal:=fIlluminatorPercent,
+    fSafeMax:=100,
+    fSafeMin:=0,
+    iTermBits:=14,
+    fTermMax:=100,
+    fTermMin:=0,
+    iRaw=>iIlluminatorINT);
+
+(*	
+fbGetIllPercent(
+    iRaw:=iIlluminatorINT,
+    iTermBits:=15,
+    fTermMax:=100,
+    fTermMin:=0,
+    fReal=>fIlluminatorPercent);
+*)]]></ST>
+    </Implementation>
+    <Method Name="M_Set_IllPercentage" Id="{829a8e7b-1f53-4629-ac5b-44b610eb951b}">
+      <Declaration><![CDATA[METHOD M_Set_IllPercentage : LREAL
+VAR_INPUT
+	IlluminatorPercent : LREAL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[This^.fIlluminatorPercent := IlluminatorPercent;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>
