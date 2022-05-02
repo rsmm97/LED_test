@@ -40,7 +40,7 @@ fbSetIllPercent(
     fTermMin:=0,
     iRaw=>iIlluminatorINT);
 
-IF not iIlluminatorINT = 0 THEN
+IF  fIlluminatorPercent > 0 THEN
 	bLedPower := TRUE;
 END_IF
 
