@@ -25,7 +25,7 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[// Turn the LED off by default
-IF bLedInit THEN
+IF not bLedInit THEN
     bLedPower := FALSE;
 //    bLedInit := TRUE;
 END_IF
@@ -39,6 +39,10 @@ fbSetIllPercent(
     fTermMax:=100,
     fTermMin:=0,
     iRaw=>iIlluminatorINT);
+
+IF not iIlluminatorINT = 0 THEN
+	bLedPower := TRUE;
+END_IF
 
 (*	
 fbGetIllPercent(

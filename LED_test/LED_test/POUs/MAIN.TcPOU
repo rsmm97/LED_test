@@ -39,8 +39,9 @@ END_VAR
     <Implementation>
       <ST><![CDATA[//bPwmOutput1.fIlluminatorPercent:=not IO.bMyInput1;
 
-bPwmOutput1.M_Set_IllPercentage(100);
+//bPwmOutput1.M_Set_IllPercentage(100);
 bPwmOutput1(fbSetIllPercent=>);
+bPwmOutput2(fbSetIllPercent=>);
 
 ]]></ST>
     </Implementation>
