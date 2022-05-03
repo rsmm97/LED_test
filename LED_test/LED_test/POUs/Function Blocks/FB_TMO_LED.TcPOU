@@ -18,17 +18,19 @@ VAR
     '}
     fIlluminatorPercent: LREAL;
 //    fbGetIllPercent: FB_AnalogInput;
-    fbSetIllPercent: FB_PWM_Output;
+    fbSetIllPercent: FB_AnalogOutput;
 
     bLedInit: BOOL := FALSE;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[// Turn the LED off by default
+(*
 IF not bLedInit THEN
     bLedPower := FALSE;
 //    bLedInit := TRUE;
 END_IF
+*)
 
 // Illuminator conversion to percentage
 fbSetIllPercent(
@@ -42,6 +44,8 @@ fbSetIllPercent(
 
 IF  fIlluminatorPercent > 0 THEN
 	bLedPower := TRUE;
+ELSE
+	bLEDPower := FALSE;
 END_IF
 
 (*	
