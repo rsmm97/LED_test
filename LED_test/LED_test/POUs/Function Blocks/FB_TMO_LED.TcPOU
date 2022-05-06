@@ -2,6 +2,10 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="FB_TMO_LED" Id="{a99d7fba-0318-482f-b028-cab96116f8cb}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_TMO_LED
+
+VAR_INPUT
+	iTermBits AT %Q* : UINT;
+END_VAR
 VAR
 	iIlluminatorINT AT %Q*: INT;
 
@@ -37,7 +41,7 @@ fbSetIllPercent(
     fReal:=fIlluminatorPercent,
     fSafeMax:=100,
     fSafeMin:=0,
-    iTermBits:=14,
+   // iTermBits=>,
     fTermMax:=100,
     fTermMin:=0,
     iRaw=>iIlluminatorINT);

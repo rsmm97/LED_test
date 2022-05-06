@@ -40,7 +40,10 @@ END_VAR
       <ST><![CDATA[//bPwmOutput1.fIlluminatorPercent:=not IO.bMyInput1;
 
 //bPwmOutput1.M_Set_IllPercentage(100);
+bPwmOutput1.iTermBits := 14;
 bPwmOutput1(fbSetIllPercent=>);
+
+bPwmOutput2.iTermBits := 15;
 bPwmOutput2(fbSetIllPercent=>);
 
 ]]></ST>
