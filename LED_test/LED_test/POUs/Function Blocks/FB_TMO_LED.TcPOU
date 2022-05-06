@@ -4,7 +4,7 @@
     <Declaration><![CDATA[FUNCTION_BLOCK FB_TMO_LED
 
 VAR_INPUT
-	iTermBits AT %Q* : UINT;
+	iTermBits : UINT;
 END_VAR
 VAR
 	iIlluminatorINT AT %Q*: INT;
@@ -41,7 +41,7 @@ fbSetIllPercent(
     fReal:=fIlluminatorPercent,
     fSafeMax:=100,
     fSafeMin:=0,
-   // iTermBits=>,
+    iTermBits:=iTermBits,
     fTermMax:=100,
     fTermMin:=0,
     iRaw=>iIlluminatorINT);

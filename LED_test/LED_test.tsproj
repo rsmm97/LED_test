@@ -86,10 +86,6 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>MAIN.bPwmOutput1.iTermBits</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
 							<Name>MAIN.bPwmOutput1.iIlluminatorINT</Name>
 							<Type>INT</Type>
 						</Var>
@@ -103,10 +99,6 @@
 								<![CDATA[ Connect this output to the terminal]]>
 							</Comment>
 							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>MAIN.bPwmOutput2.iTermBits</Name>
-							<Type>UINT</Type>
 						</Var>
 						<Var>
 							<Name>MAIN.bPwmOutput2.iIlluminatorINT</Name>
