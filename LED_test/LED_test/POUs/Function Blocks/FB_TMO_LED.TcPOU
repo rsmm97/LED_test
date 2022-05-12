@@ -2,9 +2,9 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="FB_TMO_LED" Id="{a99d7fba-0318-482f-b028-cab96116f8cb}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_TMO_LED
-
 VAR_INPUT
 	iTermBits : UINT;
+	fIlluminatorPercent : LREAL;
 END_VAR
 VAR
 	iIlluminatorINT AT %Q*: INT;
@@ -18,9 +18,9 @@ VAR
 
     {attribute 'pytmc' := '
         pv: CIL:PCT
-        EGU: %
+        field: EGU %
     '}
-    fIlluminatorPercent: LREAL;
+//    fIlluminatorPercent: LREAL;
 //    fbGetIllPercent: FB_AnalogInput;
     fbSetIllPercent: FB_AnalogOutput;
 
