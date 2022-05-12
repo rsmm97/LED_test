@@ -4,6 +4,11 @@
     <Declaration><![CDATA[FUNCTION_BLOCK FB_TMO_LED
 VAR_INPUT
 	iTermBits : UINT;
+	
+	{attribute 'pytmc' := '
+        pv: CIL:PCT
+        field: EGU %
+    '}
 	fIlluminatorPercent : LREAL;
 END_VAR
 VAR
@@ -16,10 +21,6 @@ VAR
     '}
     bLedPower AT %Q*: BOOL;
 
-    {attribute 'pytmc' := '
-        pv: CIL:PCT
-        field: EGU %
-    '}
 //    fIlluminatorPercent: LREAL;
 //    fbGetIllPercent: FB_AnalogInput;
     fbSetIllPercent: FB_AnalogOutput;
