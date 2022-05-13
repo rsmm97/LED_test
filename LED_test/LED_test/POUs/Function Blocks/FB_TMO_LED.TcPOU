@@ -10,16 +10,16 @@ VAR_INPUT
         field: EGU %
     '}
 	fIlluminatorPercent : LREAL;
-END_VAR
-VAR
-	iIlluminatorINT AT %Q*: INT;
-
-    {attribute 'pytmc' := '
+	
+	{attribute 'pytmc' := '
         pv: PWR
         field: ZNAM OFF
         field: ONAM ON
     '}
     bLedPower AT %Q*: BOOL;
+END_VAR
+VAR
+	iIlluminatorINT AT %Q*: INT;
 
 //    fIlluminatorPercent: LREAL;
 //    fbGetIllPercent: FB_AnalogInput;

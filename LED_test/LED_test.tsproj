@@ -86,12 +86,12 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>MAIN.bPwmOutput1.iIlluminatorINT</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
 							<Name>MAIN.bPwmOutput1.bLedPower</Name>
 							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.bPwmOutput1.iIlluminatorINT</Name>
+							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>MAIN.bPwmOutput1.fbSetIllPercent.iRaw</Name>
@@ -101,12 +101,12 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>MAIN.bPwmOutput2.iIlluminatorINT</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
 							<Name>MAIN.bPwmOutput2.bLedPower</Name>
 							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.bPwmOutput2.iIlluminatorINT</Name>
+							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>MAIN.bPwmOutput2.fbSetIllPercent.iRaw</Name>
