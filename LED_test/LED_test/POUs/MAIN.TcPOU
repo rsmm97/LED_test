@@ -18,6 +18,7 @@ VAR
 	{attribute 'TcLinkTo' := '.iRaw := TIID^Device 1 (EtherCAT)^Power_EK1200^AO_EL4004^AO Outputs Channel 4^Analog output'}
     bAnalogOutPut4 : FB_AnalogOutput;
 
+	// Change to push
 	
 // PWM Output variables
     {attribute 'TcLinkTo' := '.iIlluminatorINT := TIID^Device 1 (EtherCAT)^Power_EK1200^PWM_EL2502^PWM Outputs Channel 1^PWM output'}
